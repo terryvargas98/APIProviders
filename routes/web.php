@@ -35,7 +35,11 @@ Route::DELETE('/DeleteProject/{Project}','ProjectController@DeleteProject')->nam
 Route::view('/ConsumiendoApi','FormApi')->name('ApiGet');
 Route::post('/CalculandoEuros','ApiController@Calcular')->name('ApiPost');
 
-Route::get('/apiProvedor','ProjectController@api');
+
+
+Route::group(['middleware' => ['cors']], function () {
+    Route::get('/apiProvedor','ProjectController@api');
+});
 
     
 
