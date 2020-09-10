@@ -107,7 +107,7 @@ class ProjectController extends Controller
         return redirect()->route('showproject');
     }
 
-    public function api (){
+    public function api ($ruc){
          $array =  array(
             ['ruc'=>'1790085783001','SancionesPorObraNC'=>'True','familiaresAutoridades'=>'False','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'False','NoDedicadoARubro'=>'True'],
             ['ruc'=>'1790085783002','SancionesPorObraNC'=>'False','familiaresAutoridades'=>'False','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'True','NoDedicadoARubro'=>'False'],
@@ -121,6 +121,8 @@ class ProjectController extends Controller
             ['ruc'=>'1790085783010','SancionesPorObraNC'=>'False','familiaresAutoridades'=>'False','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'False','NoDedicadoARubro'=>'False'],
             
         );
+
+      $array = array_search($ruc);
       
         $Resultado = \json_encode($array);
 

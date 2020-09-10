@@ -37,7 +37,7 @@ Route::post('/CalculandoEuros','ApiController@Calcular')->name('ApiPost');
 
 
 Route::group(['middleware' => ['cors']], function () {
-    Route::get('/apiProvedor','ProjectController@api');
+    Route::get('/apiProvedor/{ruc}','ProjectController@api');
 
 });
 
