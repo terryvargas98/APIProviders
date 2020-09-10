@@ -104,7 +104,7 @@ class ProjectController extends Controller
         $Project->delete();
 
 
-        return redirect()->route('ShowProject');
+        return redirect()->route('showproject');
     }
 
     public function api (){
