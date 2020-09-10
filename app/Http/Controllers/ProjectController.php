@@ -109,7 +109,7 @@ class ProjectController extends Controller
 
     public function api (){
          $array =  array(
-            'ruc'=>'1790085783001','SancionesPorObraNC'=>'True','familiaresAutoridades'=>'False','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'False','NoDedicadoARubro'=>'True',
+            ['ruc'=>'1790085783001','SancionesPorObraNC'=>'True','familiaresAutoridades'=>'False','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'False','NoDedicadoARubro'=>'True',
             'ruc'=>'1790085783002','SancionesPorObraNC'=>'False','familiaresAutoridades'=>'False','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'True','NoDedicadoARubro'=>'False',
             'ruc'=>'1790085783003','SancionesPorObraNC'=>'True','familiaresAutoridades'=>'True','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'False','NoDedicadoARubro'=>'True',
             'ruc'=>'1790085783004','SancionesPorObraNC'=>'False','familiaresAutoridades'=>'False','FamiliaresCongresistas'=>'True','NoRegistradoComoProvedor'=>'False','NoDedicadoARubro'=>'False',
@@ -119,8 +119,7 @@ class ProjectController extends Controller
             'ruc'=>'1790085783008','SancionesPorObraNC'=>'False','familiaresAutoridades'=>'True','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'False','NoDedicadoARubro'=>'False',
             'ruc'=>'1790085783009','SancionesPorObraNC'=>'False','familiaresAutoridades'=>'False','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'False','NoDedicadoARubro'=>'False',
             'ruc'=>'1790085783010','SancionesPorObraNC'=>'False','familiaresAutoridades'=>'False','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'False','NoDedicadoARubro'=>'False',
-         
-        
+            ]
         );
       
         $Resultado = \json_encode($array);
