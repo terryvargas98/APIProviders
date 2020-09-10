@@ -108,7 +108,7 @@ class ProjectController extends Controller
     }
 
     public function api ($ruc){
-         $array =  array(
+         $arreglo =  array(
             ['ruc'=>'1790085783001','SancionesPorObraNC'=>'True','familiaresAutoridades'=>'False','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'False','NoDedicadoARubro'=>'True'],
             ['ruc'=>'1790085783002','SancionesPorObraNC'=>'False','familiaresAutoridades'=>'False','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'True','NoDedicadoARubro'=>'False'],
             ['ruc'=>'1790085783003','SancionesPorObraNC'=>'True','familiaresAutoridades'=>'True','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'False','NoDedicadoARubro'=>'True'],
@@ -122,11 +122,17 @@ class ProjectController extends Controller
             
         );
 
-    foreach ($variable as $array) {
-        $valor = $variable;
+    foreach ($arreglo as $key=>$item) {
+        if (($item['ruc']==$ruc)) {
+           
+          if ($item['SancionesPorObraNC']=='False' && $item['familiaresAutoridades']=='False'&& $item['familiaresAutoridades']=='False'  ) {
+            
+            $validacion = $item;
+         }
+        }
     }
       
-        $Resultado = \json_encode($valor);
+        $Resultado = \json_encode($validacion);
 
         return ($Resultado);
     }
