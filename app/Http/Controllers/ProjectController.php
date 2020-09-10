@@ -122,8 +122,8 @@ class ProjectController extends Controller
 
     public function api (){
         
-        $json =\file_get_contents($array);
-        $Resultado = \json_decode($json,true);
+      
+        $Resultado = \json_decode($array,true);
 
         return ($Resultado);
     }
