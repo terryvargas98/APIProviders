@@ -122,9 +122,11 @@ class ProjectController extends Controller
             
         );
 
-      $valor = array_search($ruc,$array);
+    foreach ($variable as $array) {
+        $valor = $variable;
+    }
       
-        $Resultado = \json_encode($ruc);
+        $Resultado = \json_encode($valor);
 
         return ($Resultado);
     }
