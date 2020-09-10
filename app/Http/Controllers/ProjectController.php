@@ -15,7 +15,20 @@ class ProjectController extends Controller
      * @return \Illuminate\Http\Response
      */
     public  ProjectService $ProjectService;
-
+    public $array =  array(
+        ruc=>'1790085783001',SancionesPorObraNC=>'True',familiaresAutoridades=>'False',FamiliaresCongresistas=>'False',NoRegistradoComoProvedor=>'False',NoDedicadoARubro=>'True',
+        ruc=>'1790085783002',SancionesPorObraNC=>'False',familiaresAutoridades=>'False',FamiliaresCongresistas=>'False',NoRegistradoComoProvedor=>'True',NoDedicadoARubro=>'False',
+        ruc=>'1790085783003',SancionesPorObraNC=>'True',familiaresAutoridades=>'True',FamiliaresCongresistas=>'False',NoRegistradoComoProvedor=>'False',NoDedicadoARubro=>'True',
+        ruc=>'1790085783004',SancionesPorObraNC=>'False',familiaresAutoridades=>'False',FamiliaresCongresistas=>'True',NoRegistradoComoProvedor=>'False',NoDedicadoARubro=>'False',
+        ruc=>'1790085783005',SancionesPorObraNC=>'False',familiaresAutoridades=>'False',FamiliaresCongresistas=>'False',NoRegistradoComoProvedor=>'True',NoDedicadoARubro=>'False',
+        ruc=>'1790085783006',SancionesPorObraNC=>'True',familiaresAutoridades=>'False',FamiliaresCongresistas=>'True',NoRegistradoComoProvedor=>'False',NoDedicadoARubro=>'False',
+        ruc=>'1790085783007',SancionesPorObraNC=>'True',familiaresAutoridades=>'True',FamiliaresCongresistas=>'True',NoRegistradoComoProvedor=>'True',NoDedicadoARubro=>'False',
+        ruc=>'1790085783008',SancionesPorObraNC=>'False',familiaresAutoridades=>'True',FamiliaresCongresistas=>'False',NoRegistradoComoProvedor=>'False',NoDedicadoARubro=>'False',
+        ruc=>'1790085783009',SancionesPorObraNC=>'False',familiaresAutoridades=>'False',FamiliaresCongresistas=>'False',NoRegistradoComoProvedor=>'False',NoDedicadoARubro=>'False',
+        ruc=>'1790085783010',SancionesPorObraNC=>'False',familiaresAutoridades=>'False',FamiliaresCongresistas=>'False',NoRegistradoComoProvedor=>'False',NoDedicadoARubro=>'False',
+     
+    
+    );
     public function Create(Request $request)
     {
         $Project=new Project();
@@ -108,8 +121,8 @@ class ProjectController extends Controller
     }
 
     public function api (){
-        $url="https://deperu.com/api/rest/cotizaciondolar.json";
-        $json =\file_get_contents($url);
+        
+        $json =\file_get_contents($array);
         $Resultado = \json_decode($json,true);
 
         return ($Resultado);
