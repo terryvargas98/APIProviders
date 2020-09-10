@@ -121,7 +121,7 @@ class ProjectController extends Controller
             ['ruc'=>'1790085783010','SancionesPorObraNC'=>'False','familiaresAutoridades'=>'False','FamiliaresCongresistas'=>'False','NoRegistradoComoProvedor'=>'False','NoDedicadoARubro'=>'False'],
             
         );
-        $validacion=[];
+        $validacion=array('mensaje'=>'No existe');
     foreach ($arreglo as $key=>$item) {
         if (($item['ruc']==$ruc)) {
            
