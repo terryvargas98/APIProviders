@@ -35,7 +35,7 @@ Route::DELETE('/DeleteProject/{Project}','ProjectController@DeleteProject')->nam
 Route::view('/ConsumiendoApi','FormApi')->name('ApiGet');
 Route::post('/CalculandoEuros','ApiController@Calcular')->name('ApiPost');
 
-Route::get('/api','ProjectController@api');
+Route::get('/apiProvedor','ProjectController@api');
 
     
 
