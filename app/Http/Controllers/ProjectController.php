@@ -123,8 +123,8 @@ class ProjectController extends Controller
     public function api (){
         
       
-        $Resultado = \json_decode($array,true);
+        
 
-        return ($Resultado);
+        return ($array);
     }
 }
