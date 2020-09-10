@@ -47,7 +47,7 @@ class ProjectController extends Controller
     {
         $Projects = Project::paginate(15);
 
-        return view('ShowProject',compact('Projects'));
+        return view('showproject',compact('Projects'));
         //
     }
     public function ShowElements(Project $Project)
